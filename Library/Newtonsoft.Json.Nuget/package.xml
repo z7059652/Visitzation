@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--generated from nuspec-->
+<Package name="Newtonsoft.Json.Nuget" version="8.0" schemaVersion="1.0" namespace="nuget">
+  <Description><![CDATA[Json.NET
+Json.NET is a popular high-performance JSON framework for .NET
+import comment:NXCheck fails so will not work with store apps]]></Description>
+  <Permissions>
+    <Owners>
+      <User Identity="James Newton-King" />
+      <User Identity="pauljon" />
+    </Owners>
+    <Contributors>
+      <User Identity="James Newton-King" />
+    </Contributors>
+  </Permissions>
+  <Public>
+    <Exports>
+      <Export name="net20" description="framework special case" />
+      <Export name="net35" description="framework special case" />
+      <Export name="net40" description="framework special case" />
+      <Export name="net45" description="framework special case" />
+      <Export name="portable-net40+sl50+wp80+win80+wpa81" description="framework special case" />
+      <Export name="portable-net45+wp80+win80+wpa81+dnxcore50" description="framework special case" />
+    </Exports>
+    <Binaries>
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\net20" arch="amd64" buildType="debug,retail" export="net20" />
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\net35" arch="amd64" buildType="debug,retail" export="net35" />
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\net40" arch="amd64" buildType="debug,retail" export="net40" />
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\net45" arch="amd64" buildType="debug,retail" export="net45" />
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\portable-net40+sl5+wp80+win8+wpa81" arch="amd64" buildType="debug,retail" export="portable-net40+sl50+wp80+win80+wpa81" />
+      <PreBuilt name="Newtonsoft.Json.dll" path="lib\portable-net45+wp80+win8+wpa81+dnxcore50" arch="amd64" buildType="debug,retail" export="portable-net45+wp80+win80+wpa81+dnxcore50" />
+    </Binaries>
+  </Public>
+</Package>

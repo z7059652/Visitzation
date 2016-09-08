@@ -1,0 +1,5 @@
+namespace Microsoft.AdCenter.BI.UET.StreamingSchema
+
+struct UMS_ANID
+{
+}

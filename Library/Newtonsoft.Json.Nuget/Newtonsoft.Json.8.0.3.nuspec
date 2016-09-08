@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>Newtonsoft.Json</id>
+    <version>8.0.3</version>
+    <title>Json.NET</title>
+    <authors>James Newton-King</authors>
+    <owners>James Newton-King</owners>
+    <licenseUrl>https://raw.github.com/JamesNK/Newtonsoft.Json/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://www.newtonsoft.com/json</projectUrl>
+    <iconUrl>http://www.newtonsoft.com/content/images/nugeticon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Json.NET is a popular high-performance JSON framework for .NET</description>
+    <language>en-US</language>
+    <tags>json</tags>
+    <references>
+      <group targetFramework=".NETFramework2.0">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+      <group targetFramework=".NETFramework3.5">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+      <group targetFramework=".NETFramework4.0">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net40+sl5+wp80+win8+wpa81">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+wp80+win8+wpa81+dnxcore50">
+        <reference file="Newtonsoft.Json.dll" />
+      </group>
+    </references>
+  </metadata>
+</package>

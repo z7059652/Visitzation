@@ -1,0 +1,1126 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <Schema>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="AbsPositionMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdLayoutId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="RelativePosition" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="AbsPosition" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          
+            <xs:element name="AccountAccountRelation_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="RelationShipId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="RelatedToAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          
+            <xs:element name="AccountCampaignMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="CustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          
+            <xs:element name="AccountCustomerIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="CustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="OperationalServiceSegmentLevelKey" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ServiceLevelId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="AdvertiserAccountOwnerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="AccountIdMSRevenueCountry_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MSRevenueCountry" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="3" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AccountPreferredCurrencyMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="PreferredCurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdCenterIP_Blacklist_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IPRange" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="50" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ListId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="MatchAlgorithmId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdUnitIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdUnitId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="MarketplaceClassificationID" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="RPSGuaranteeID" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="BillingClassificationID" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DisputedFlag" msprop:ExtendedDataType="Boolean" type="xs:boolean" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="Pre1209" msprop:ExtendedDataType="Boolean" type="xs:boolean" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdvertiserNetPercentageFullMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdvDayId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="AdvAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                  <xs:element name="AdvNetPct" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="am_AgeLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AgeNumber" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="AgeBucketId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="am_Gender_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GenderId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GenderCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="BingVerticalMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="BingVerticalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="BingVerticalName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="128" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CA_ActionIdLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProfileId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ActionId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                  <xs:element name="PositionNum" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                  <xs:element name="ActionTypeId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CA_CountryLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CountryCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="CountryId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CA_LanguageLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LCID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="LanguageLocaleId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CA_ProfileLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="ProfileId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CABEMTIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SubCategoryId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="mtid" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+           <xs:element name="CampaignConvFullMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CampaignExtensionFullMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="CampaignExtensionFlag" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="ClickToCallCampaignTimeZoneFullMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="CustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="CampaignTimeZoneId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="ConstantDollarExchangeRateMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="FiscalYearNumber" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="ExchangeRateAmt" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+         <xs:element name="CountryMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CountryID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR"/>
+                  <xs:element name="CountryCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="PRESERVE" minOccurs="0"  msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CurrencyScalingFactorMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="CurrencyScalingFactor" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CustomerIDAccountIDAdUnitIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PublisherId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="AdUnitId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="TimeZoneId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="AdUnitTypeId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CustomerIDAccountIDChannelIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PublisherId" msprop:ExtendedDataType="Int32"  msprop:SortKeyPos="1" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32"  msprop:SortKeyPos="2" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="ChannelId" msprop:ExtendedDataType="Int32"  msprop:SortKeyPos="3" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CustomerIDPropertyIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PublisherId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PropertyId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CustomEventGoalTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventCategory" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="100" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventCategoryOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventNameOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventLabel" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventLabelOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventValueOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CustomEventGoalTypeMapV2_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                  <xs:element name="EventCategory" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="100" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventCategoryOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventNameOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventLabel" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventLabelOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EventValueOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DailyOrderCurrencyExchangeRateMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountPreferredCurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="DayId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                  <xs:element name="OrderCurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="3" />
+                  <xs:element name="ExchangeRate" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ExchangeRateUSD" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DataCenter_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DataCenterCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="3" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="DataCenterId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DestinationUrlGoalTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DestinationURL" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1024" msprop:NullValue="ERROR" />
+                  <xs:element name="DestinationURLOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DestinationUrlGoalTypeMapV2_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                  <xs:element name="DestinationURL" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1024" msprop:NullValue="ERROR" />
+                  <xs:element name="DestinationURLOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DeviceIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MakeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ModelName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="DeviceId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DeviceOSIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OSName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="250" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="OSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DeviceOSVersionIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="OSVersion" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="128" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="DeviceOSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DistributionChannelCurrencyMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DistributionChannelId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="CurrencyID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DistributionchannelLCID_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DistributionChannelId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="LCID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DurationPerVisitGoalTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DurationGoal" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="DurationOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DurationPerVisitGoalTypeMapV2_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                  <xs:element name="DurationGoal" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="DurationOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DynamicPropertyURL_Blacklist_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Pattern" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="276" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ListId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="MatchAlgorithmId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="FormattedDateFiscalMonthMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="YYYY" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MM" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="DD" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="3" />
+                  <xs:element name="DayId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="FiscalMonthId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="FiscalYearNum" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="FormCode_Blacklist_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FormCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ListId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="MatchAlgorithmId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="FormCodeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SearchFormCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="30" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="SearchFormId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="EntryPointLevel1Id" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="FormCodeOrganic" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="GeoLocationDetailMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="CountryCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="SubGeographyName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="150" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="CityName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="3" />
+                  <xs:element name="MetroAreaId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="Hourly_AccountCampaignMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Accountid" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="Customerid" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="Campaignid" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="ImpressionRangeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StartImpressionCount" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="EndImpressionCount" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ImpressionRangeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="InventoryProcurementContractAccount_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="InventoryProcurementContractTermBinding_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PubDayId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="AdUnitId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                  <xs:element name="ContractTermId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                  <xs:element name="ContractTermVersionId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="LanguageMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LanguageID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="LanguageCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="7" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="LocationMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="CountryID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="MakeIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MakeName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MakeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="MarketPlaceClassificationMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MarketplaceClassificationId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="MarketplaceClassificationName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="50" msprop:NullValue="ERROR" />
+                  <xs:element name="ModifiedBy" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="ModifiedDateTime" msprop:ExtendedDataType="DateTime" type="xs:dateTime" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="MasterTaxonomy_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MTID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="VerticalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="VerticalL2Id" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="VerticalL0Id" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ReportingTaxonomyId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="VerticalL3Id" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="VerticalL4Id" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdvertiserNetPercentageMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdvDayId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="AdvAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                  <xs:element name="AdvNetPct" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="Merge_CampaignConvMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="Merge_CampaignExtensionMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="CampaignExtensionFlag" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="NCPReasonCodes_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RSNID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="ReasonCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="8" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="NotDisplayedReason" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IsAdDisplayed" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="NokiaNetRevenueAdUnit_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdUnitId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="AdUnitName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="AccountName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="100" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ActionFlag" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="NokiaNetRevenueFormCode_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SearchFormId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="SearchFormCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="30" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="SearchFormName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="Level1" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="Level2" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="Level3" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="OSD_DeviceIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MakeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ModelName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="DeviceId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="OSD_DeviceOSIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OSName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="250" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="OSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="OSD_DeviceOSVersionIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="OSVersion" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="128" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="DeviceOSId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="OSD_MakeIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MakeName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MakeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PagePositionMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PagePositionCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="10" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PagePositionId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PagesPerVisitGoalTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="PageVisitGoal" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="PageVisitOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PagesPerVisitGoalTypeMapV2_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                  <xs:element name="PageVisitGoal" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="PageVisitOperator" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PartnerDistributionIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PartnerDistributionCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="200" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="PartnerDistributionId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PricingModel_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PricingModelId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="PricingModelName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="20" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PricingModelScalingFactorMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PricingModelId" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1998" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="PricingModelScalingFactor" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1998" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PropertyIDMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PropertyId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PropertyUrl" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1000" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="PropertyGUID" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="36" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PublisherAccountFraudAttributes_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PublisherAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="PropertyUrl" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2000" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="MarketId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ServiceLevelId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="CustomerTypeId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IndustryId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IsLocal" msprop:ExtendedDataType="Boolean" type="xs:boolean" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="FinancialStatusId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="LifeCycleStatusId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="TrustRatingId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PublisherAccountIdMediumIdSKU_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PublisherAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MediumId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="SKU" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="16" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="Y_SKU" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="16" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PublisherEarningsCalculationMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PubDayId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="ContractTermId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="2" />
+                  <xs:element name="CostingModelId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="CPMRate" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="ERROR" />
+                  <xs:element name="RevSharePct" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PublisherOwnerMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OwnerAccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PublisherAccountOwnerId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="PublisherPayoutRatios_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MediumId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="OperationCostRatio" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="EarningRatio" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="Referrer_Blacklist_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Referrer" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ListId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="MatchAlgorithmId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="RPSGuaranteeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RPSGuaranteeID" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="RPSGuaranteeName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="50" msprop:NullValue="ERROR" />
+                  <xs:element name="ModifiedBy" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="ModifiedDateTime" msprop:ExtendedDataType="DateTime" type="xs:dateTime" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="SearchMobileAdUnitMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdCenterAdUnitId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="SearchSiteVersionIdMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SearchSiteVersionName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="20" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="SearchSiteVersionId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="TagSpecificGoalTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="TagSpecificGoalTypeMapV2_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="GoalValue" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="TrafficPartitionMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TrafficPartitionCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="TrafficPartitionId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="UserAgent_Blacklist_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserAgent" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="ListId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="MatchAlgorithmId" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="LogDomainMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DomainId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="TargetDomainId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="DomainName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="FiscalMonthOrderCurrencyExchangeRateMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountPreferredCurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="FiscalMonthId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="OrderCurrencyId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="3" />
+                  <xs:element name="ExchangeRate" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ExchangeRateUSD" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdvertiserTaxonomy_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Code" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="AdvertiserAccountID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DemandTaxonomyID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ActionFlag" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IsActive" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="LastModifiedBy" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2000" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="RowId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                  <xs:element name="RunId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DemandTaxonomy_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Code" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L1_Category" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L2_Category" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L3_Category" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L4" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L5" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="L6" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="500" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ActionFlag" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IsActive" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="LastModifiedBy" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="2000" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="RowId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                  <xs:element name="RunId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="DeviceUserAgent_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserAgentID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="UserAgentName" msprop:ExtendedDataType="String" msprop:SortKeyPos="1"  type="xs:string" msprop:DataSize="4000" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DeviceTypeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DeviceMakeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DeviceModelID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="OSID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="OSDetailsID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="PlatformOSID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="DeviceTypeDetailsID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="OSGroupCode" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="BrowserCode" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="BrowserDetailCode" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="RadiusTargetingActiveFlagMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CampaignId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="BusinessLocationId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="Radius" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IsActive" msprop:ExtendedDataType="Boolean" type="xs:boolean" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="3" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AccountPartition_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DbTypeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="PartitionId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AdUnitMedium_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdUnitTypeId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="MediumId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+         <xs:element name="AdvertiserConversionDeduplicationAlgorithm_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdvertiserCustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="AlgorithmId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ExclusionWindow" msprop:ExtendedDataType="Double" type="xs:double" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="IncomingPublisherMarketMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IncomingPublisherMarketID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IncomingPublisherMarketCountryCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="510" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="IncomingPublisherMarketLanguageCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="510" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="AccountLookbackWindow_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AdvertiserAccountId" msprop:SortKeyPos="1" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="LookbackWindow" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="BillingUserLocation_Stripe">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationCountryId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="BillingUserLocationId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CA_CustomDimensionLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                 <xs:element name="ProfileId" msprop:Description="" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:design-time-name="e5257a7b-975d-4f0f-b7e7-bb14eeb8ca81" msprop:ExtendedDataType="Int64" type="xs:long" minOccurs="0" />
+                  <xs:element name="Key" msprop:Description="" msprop:design-time-name="e5257a7b-975d-4f0f-b7e7-bb14eeb8ca81" msprop:SortKeyPos="2" msprop:DataSize="20" msprop:ExtendedDataType="String" msprop:NullValue="PRESERVE" type="xs:string" minOccurs="0" />
+                  <xs:element name="Value" msprop:Description="" msprop:design-time-name="e5257a7b-975d-4f0f-b7e7-bb14eeb8ca81" msprop:SortKeyPos="3" msprop:DataSize="20" msprop:ExtendedDataType="String" msprop:NullValue="PRESERVE" type="xs:string" minOccurs="0" />
+                  <xs:element name="CustomDimensionId" msprop:Description="" msprop:NullValue="PRESERVE" msprop:design-time-name="e5257a7b-975d-4f0f-b7e7-bb14eeb8ca81" msprop:ExtendedDataType="Int64" type="xs:long" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="CA_OccupationLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OccupationCode" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="1" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="1" />
+                  <xs:element name="OccupationId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          <xs:element name="Yahoo_CA_YahooGoalLookup_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProfileId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="EventTag" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" msprop:SortKeyPos="2" />
+                  <xs:element name="GoalId" msprop:ExtendedDataType="Int64" type="xs:long" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="AccountAgencyMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AccountID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:SortKeyPos="1" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="AgencyID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="AgencyType" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="14" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="DateMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msprop:ExtendedDataType="Int32" type="xs:int" msprop:SortKeyPos="1" msprop:NullValue="ERROR" />
+                  <xs:element name="MonthID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="FiscalMonthID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="CalendarQuarterNumber" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="FiscalQuarterNumber" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="CalendarYearNumber" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                  <xs:element name="FiscalYearNumber" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="ReportingWeekID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="DistributionChannelCountryMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DistributionChannelId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:SortKeyPos="1" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="CountryID" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="FraudTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FraudQualityTypeID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:SortKeyPos="1" msprop:NullValue="ERROR" />
+                  <xs:element name="FraudStatusId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="BillableStatusID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="PagePositionHierarchyMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PagePosition" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PagePlacementId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="PropertyTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PropertyID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="PropertyTypeID" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+            <xs:element name="SearchFormLevelMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SearchFormId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:SortKeyPos="1" msprop:NullValue="ERROR" />
+                  <xs:element name="Level1" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="Level2" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                  <xs:element name="Level3" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="255" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ServiceTypeMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ServiceLevelID" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="IsAgency" msprop:ExtendedDataType="Byte" type="xs:unsignedByte" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SmartPricingRuleMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SmartPricingRuleId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" msprop:SortKeyPos="1" />
+                  <xs:element name="SmartPricingTypeId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>		
+			<xs:element name="CustomerTagMap_Stripe" msprop:DataFormat="DTS" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TagId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" />
+                  <xs:element name="CustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="TagName" msprop:ExtendedDataType="String" type="xs:string" msprop:DataSize="256" msprop:NullValue="PRESERVE" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>			
+			<xs:element name="AppInstallGoalTypeMap_Stripe"  msprop:DataFormat="DTS" msprop:DataCompression="GZIP" >
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GoalId" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="AppStoreId" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Application Id e.g. com.travelocity.android" msprop:ExtendedDataType="String" msprop:DataSize="1024" type="xs:string" minOccurs="0" />
+                  <xs:element name="AppPlatform" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Application platform e.g. Android" msprop:ExtendedDataType="String" msprop:DataSize="64" type="xs:string" minOccurs="0" />
+                  <xs:element name="LookbackWindow" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Goal lookback window in seconds." msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="GoalValue" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:ExtendedDataType="Double" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="AppInstallGoalTypeMapV2_Stripe"  msprop:DataFormat="DTS" msprop:DataCompression="GZIP" >
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GoalId" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="AppStoreId" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Application Id e.g. com.travelocity.android" msprop:ExtendedDataType="String" msprop:DataSize="1024" type="xs:string" minOccurs="0" />
+                  <xs:element name="AppPlatform" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Application platform e.g. Android" msprop:ExtendedDataType="String" msprop:DataSize="64" type="xs:string" minOccurs="0" />
+                  <xs:element name="LookbackWindow" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:Description="Goal lookback window in seconds." msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="GoalValue" msprop:NullValue="PRESERVE" msprop:design-time-name="82666c9d-a2c2-4cda-9ebd-adcb492c83e0" msprop:ExtendedDataType="Double" type="xs:double" minOccurs="0" />
+                  <xs:element name="GoalTrackingType" msprop:ExtendedDataType="Int16" type="xs:short" minOccurs="1" />
+                  <xs:element name="AccountId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="PRESERVE" minOccurs="0" />
+                  <xs:element name="GoalValueSourceId" msprop:ExtendedDataType="Int16" type="xs:short" msprop:NullValue="ERROR" minOccurs="1"/>
+                  <xs:element name="CustomerId" msprop:ExtendedDataType="Int32" type="xs:int" msprop:NullValue="ERROR" minOccurs="1"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+			<xs:element name="DevTokenUserMap_Stripe" msprop:RecordDelimiter="COMMA" msprop:DataCompression="GZIP" msprop:DataFormat="DTS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DevToken" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:DataSize="20" msprop:ExtendedDataType="StringA" type="xs:string" />
+                  <xs:element name="UserId" msprop:NullValue="PRESERVE" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerId" msprop:NullValue="PRESERVE" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="UserCustomerMap_Stripe" msprop:RecordDelimiter="COMMA" msprop:DataCompression="GZIP" msprop:DataFormat="DTS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserId" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerId" msprop:NullValue="PRESERVE" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+			<xs:element name="CustomerAccountMap_Stripe" msprop:RecordDelimiter="COMMA" msprop:DataCompression="GZIP" msprop:DataFormat="DTS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CustomerId" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:ExtendedDataType="Int32" type="xs:int" minOccurs="0" />
+                  <xs:element name="AccountId" msprop:NullValue="PRESERVE" msprop:DataSize="8000" msprop:ExtendedDataType="StringA" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+			<xs:element name="APIOperationMap_Stripe" msprop:DataFormat="DTS" msprop:RecordDelimiter="COMMA" msprop:DataCompression="GZIP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OperationName" msprop:NullValue="PRESERVE" msprop:SortKeyPos="1" msprop:DataSize="100" msprop:ExtendedDataType="StringA" type="xs:string" />
+                  <xs:element name="Operation" msprop:NullValue="PRESERVE" msprop:DataSize="10" msprop:ExtendedDataType="StringA" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </Schema>
+</DataSourceView>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AD30303-E01C-4ADF-BA9F-7B45FD02FE47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisitizationCommon</RootNamespace>
+    <AssemblyName>VisitizationCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AdCenter.BI.UET.Common.Helpers">
+      <HintPath>C:\Users\t-zhuxia\Desktop\dll\Microsoft.AdCenter.BI.UET.Common.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AdCenter.BI.UET.Schema">
+      <HintPath>..\Library\Microsoft.AdCenter.BI.UET.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BI.Common">
+      <HintPath>..\Library\Microsoft.BI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bond">
+      <HintPath>..\Library\Microsoft.Bond.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bond.Interfaces">
+      <HintPath>..\Library\Microsoft.Bond.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UETCommon">
+      <HintPath>..\UETCommon\obj\Debug\UETCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInstallProcessor.cs" />
+    <Compile Include="BondReader.cs" />
+    <Compile Include="AnalyticsGuidExtractor.cs" />
+    <Compile Include="AESwithHMACDecryption.cs" />
+    <Compile Include="AnalyticsCookieParser.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="UETLogDedupReducer.cs" />
+    <Compile Include="CryptoWinApi.cs" />
+    <Compile Include="MapFileUtils.cs" />
+    <Compile Include="TagToCustomerRecord.cs" />
+    <Compile Include="TagIdNameMap.cs" />
+    <Compile Include="DeterministicGuid.cs" />
+    <Compile Include="CommonUtils.cs" />
+    <Compile Include="EnumeratedQueryString.cs" />
+    <Compile Include="UETLogProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserIdCoverageLogProcessor.cs" />
+    <Compile Include="VisitizationUtils.cs" />
+    <Compile Include="VisitizeReducer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="encryptionkeyAES.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\schema\schema.csproj">
+      <Project>{a9e2617a-6388-4bde-9fef-60f51433e9bc}</Project>
+      <Name>schema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
