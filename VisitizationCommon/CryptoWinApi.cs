@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
+    [Serializable]
     internal class CryptoWinApi
     {
         #region Const

@@ -6,6 +6,7 @@ using Microsoft.Bond;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
+    [Serializable]
     public class AppInstallProcessor
     {
         private static AppInstallProcessor instance = null;

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
@@ -7,6 +8,7 @@ namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
     /// Tag can be associated to a customer or to an account. 
     /// If Tag is associated to a customer, AdvertiserAccountId is null
     /// </summary>
+    [Serializable]
     public class TagToCustomerRecord
     {
         private static int _tagIdOrdinal = -1;

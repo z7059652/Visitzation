@@ -18,6 +18,7 @@ namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
         FAILED_MAP_TAGNAME_TO_TAGID = 8,
         TAGID_NOTFOUND_FORCUSTOMER = 9
     }
+    [Serializable]
     public class VisitizationUtils
     {
         public const string EventTypeCustom = "custom";

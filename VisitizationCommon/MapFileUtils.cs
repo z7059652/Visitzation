@@ -8,6 +8,7 @@ using IDataReader = Microsoft.BI.Common.IO.IDataReader;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
+    [Serializable]
     public static class MapFileUtils
     {
         /// <summary>

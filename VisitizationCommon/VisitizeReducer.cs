@@ -9,6 +9,7 @@ using Microsoft.Bond;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
+    [Serializable]
     public class VisitizeReducer
     {
         private const char delimeter = '\n';

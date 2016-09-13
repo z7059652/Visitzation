@@ -9,7 +9,6 @@ using System.IO;
 
 namespace Microsoft.AdCenter.BI.UET.StreamingSchema
 {
-
     [Serializable()]
     public class IStringSerialize
     {
@@ -27,6 +26,7 @@ namespace Microsoft.AdCenter.BI.UET.StreamingSchema
             return (IStringSerialize)JsonConvert.DeserializeObject(line, types);
         }
     }
+
 
     [Serializable()]
     public static class IExtend
@@ -75,8 +75,6 @@ namespace Microsoft.AdCenter.BI.UET.StreamingSchema
                 }
             }
             return result;
-            //string str = Convert.ToBase64String(result);
-            //return str;
         }
     }
 }

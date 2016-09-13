@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
 {
+    [Serializable]
     public class CommonUtils
     {
         private const int NewUETTagIdSeedValue = 4000000;

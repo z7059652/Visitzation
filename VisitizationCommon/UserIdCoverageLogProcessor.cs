@@ -22,46 +22,51 @@ namespace Microsoft.AdCenter.BI.UET.Visitization.VisitizationStreamingCommon
                 return instance;
             }
         }
-        AnalyticsGuidExtractor analyticsGuidExtractor = new AnalyticsGuidExtractor();
-        BondReader<UserIdCoveragePair> reader = new BondReader<UserIdCoveragePair>();
 
         private UserIdCoverageLogProcessor()
         {
 
         }
-        public string GetData(string line)
-        {
-            if (string.IsNullOrEmpty(line))
-                return null;
-            string[] values = line.Split(new char[] { '\t' }, StringSplitOptions.RemoveEmptyEntries);
-            if(values == null || values.Length <3)
-                return null;
-            byte[] LogRecord = Convert.FromBase64String(values[0]);
 
-            UserIdCoveragePair uicPair;
-            if(reader.TryParse(LogRecord,out uicPair))
+        public IEnumerable<string> GetData(IEnumerable<string> data)
+        {
+            List<string> res = new List<string>();
+            AnalyticsGuidExtractor analyticsGuidExtractor = new AnalyticsGuidExtractor();
+            BondReader<UserIdCoveragePair> reader = new BondReader<UserIdCoveragePair>();
+            foreach(var line in data)
             {
-                if(uicPair != null && !String.IsNullOrEmpty(uicPair.AnalyticsCookie) && !String.IsNullOrEmpty(uicPair.UETMatchingQueryString))
+                if (string.IsNullOrEmpty(line))
+                    return null;
+                string[] values = line.Split(new char[] { '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                if(values == null || values.Length <3)
+                    return null;
+                byte[] LogRecord = Convert.FromBase64String(values[0]);
+
+                UserIdCoveragePair uicPair;
+                if(reader.TryParse(LogRecord,out uicPair))
                 {
-                    Guid? analyticsGuid;
-                    if (analyticsGuidExtractor.TryExtractAnalyticsGuid(uicPair.AnalyticsCookie, out analyticsGuid))
+                    if(uicPair != null && !String.IsNullOrEmpty(uicPair.AnalyticsCookie) && !String.IsNullOrEmpty(uicPair.UETMatchingQueryString))
                     {
-                        var mid = uicPair.UETMatchingQueryString.Split('&').FirstOrDefault(s => s.StartsWith("mid="));
-                        if(mid != null)
+                        Guid? analyticsGuid;
+                        if (analyticsGuidExtractor.TryExtractAnalyticsGuid(uicPair.AnalyticsCookie, out analyticsGuid))
                         {
-                            var uetMatchingGuid = CommonUtils.ParseGuid(mid.Substring(4));
-                            if(uetMatchingGuid.HasValue)
+                            var mid = uicPair.UETMatchingQueryString.Split('&').FirstOrDefault(s => s.StartsWith("mid="));
+                            if(mid != null)
                             {
-                                var output = new UserIdCoverageShcema();
-                                output.UETMatchingGuid = uetMatchingGuid;
-                                output.AnalyticsGuid = analyticsGuid;
-                                return UserIdCoverageShcema.Serialize(output);
+                                var uetMatchingGuid = CommonUtils.ParseGuid(mid.Substring(4));
+                                if(uetMatchingGuid.HasValue)
+                                {
+                                    var output = new UserIdCoverageShcema();
+                                    output.UETMatchingGuid = uetMatchingGuid;
+                                    output.AnalyticsGuid = analyticsGuid;
+                                    res.Add(UserIdCoverageShcema.Serialize(output));
+                                }
                             }
                         }
                     }
                 }
             }
-            return null;
+            return res;
         }
     }
 }

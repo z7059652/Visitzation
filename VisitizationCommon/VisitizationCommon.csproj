@@ -81,6 +81,8 @@
     <Compile Include="AESwithHMACDecryption.cs" />
     <Compile Include="AnalyticsCookieParser.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="EscrowCandidateProcessor.cs" />
+    <Compile Include="GoalConversionProcessor.cs" />
     <Compile Include="UETLogDedupReducer.cs" />
     <Compile Include="CryptoWinApi.cs" />
     <Compile Include="MapFileUtils.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="EnumeratedQueryString.cs" />
     <Compile Include="UETLogProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCombineReducer.cs" />
     <Compile Include="UserIdCoverageLogProcessor.cs" />
     <Compile Include="VisitizationUtils.cs" />
     <Compile Include="VisitizeReducer.cs" />

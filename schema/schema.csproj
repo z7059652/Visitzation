@@ -49,6 +49,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AdCenter.BI.UET.LookBackSummaryCommon">
+      <HintPath>C:\Users\t-zhuxia\Desktop\dll\Microsoft.AdCenter.BI.UET.LookBackSummaryCommon.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AdCenter.BI.UET.Schema">
       <HintPath>..\Library\Microsoft.AdCenter.BI.UET.Schema.dll</HintPath>
     </Reference>
@@ -74,11 +77,16 @@
     <Compile Include="AppInstallVisitsSchema.cs" />
     <Compile Include="BondConvert.cs" />
     <Compile Include="IStringSerialize.cs" />
+    <Compile Include="NewEscrowCandidate.cs" />
     <Compile Include="UETLogViewSchema.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UMSSchema.cs" />
+    <Compile Include="UMS_ANIDSchema.cs" />
+    <Compile Include="UMS_MUIDSchema.cs" />
     <Compile Include="UserIdCoverageShcema.cs" />
     <Compile Include="VisitizationSchema.cs" />
+    <Compile Include="VisitsForUsersWithStableIdFromANIDSchema.cs" />
+    <Compile Include="VisitsForUsersWithUETUserId.cs" />
+    <Compile Include="VisitsForUsersWithUETUserIdMUIDANIDPart.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
